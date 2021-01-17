@@ -1,0 +1,17 @@
+{% extends 'spares/base_spares.html' %}
+
+{% block content %}
+    <h4>{{ TEST }}</h4>
+    {% for spare in spares %}
+        <h5><a class="copyright text-muted">
+        <p> Наименование:    {{ spare.spares_name }} </p>
+        <p> Стоимость:    {{ spare.price }} руб </p>
+        <p> Индефикационный номер:    {{ spare.number }} </p>
+        <p> Производитель:    {{ spare.manufacturer }} </p>
+        <p> Остаток:    {{ spare.stock }} </p>
+
+        </a></h5>
+
+    {% endfor %}
+
+{% endblock %}

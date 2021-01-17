@@ -1,0 +1,11 @@
+{% extends 'spares/base_spares.html' %}
+
+{% block content %}
+     <a class="copyright text-muted">{{ title }}:</a>
+    {% for spare in spares %}
+        <p><h5><a href="{{ spare.id }}">{{ spare.spares_name }} /
+    {{ spare.manufacturer }} - {{ spare.price }} руб </a></h5></p>
+
+    {% endfor %}
+
+{% endblock %}
