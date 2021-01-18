@@ -30,3 +30,12 @@ class Spares(models.Model):
         verbose_name_plural = 'Запчасти'
 
 
+class Brand(models.Model):
+    name = models.CharField('Бренд', max_length=150, db_index=True)
+
+    def __str__(self):
+        return self.name
+
+    class Meta:
+        verbose_name = 'Бренд'
+        verbose_name_plural = 'Бренды'

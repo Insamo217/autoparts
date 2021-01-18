@@ -1,21 +1,18 @@
 {% extends 'spares/base_spares.html' %}
 
-
 {% block content %}
-
     <div class="container">
-        <h4><a class="copyright text-muted">Виды запчастей:</a></h4><br>
+        <h4><a class="copyright text-muted">Марки автомобилей:</a></h4><br>
           <div class="row">
-            {% for category in categories_list %}
+            {% for brand in brands %}
                 <ul class="list-group list-group-horizontal-md">
                   <li class="list-group-item">
                       <button type="button" class="btn btn-light">
-                          <a href="{{ category }}">{{ category }}</a>
+                          <a href="{{ brand.name }}">{{ brand.name }}</a>
                       </button>
                   </li>
                 </ul>
             {% endfor %}
           </div>
     </div>
-
 {% endblock %}
