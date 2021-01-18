@@ -4,7 +4,7 @@
     <a class="copyright text-muted">Виды запчастей:</a>
     {% for category in categories_list %}
        <p><h5>
-           <a href="{{ category.category_name }}">{{ category.category_name }}</a></h5></p>
+           <a href="{{ category }}">{{ category }}</a></h5></p>
     {% endfor %}
 
 {% endblock %}
