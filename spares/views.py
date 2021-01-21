@@ -86,6 +86,10 @@ def spare_card(request, category_name, id, category):
                   context={'spares': spares})
 
 
+def buy_card(request, category_name, id, category):
+    return render(request, 'spares/buy_card.html')
+
+
 def brands(request):
     brands = Brand.objects.all()
     return render(request, 'spares/brands.html',
